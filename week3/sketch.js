@@ -3,7 +3,7 @@ let swaggerMultiplyer = 0.25; //global variable: "let" is a function that allows
 function setup() {
   //createCanvas(windowWidth, windowHeight);
   createCanvas(400, 400);
-  swaggerMultiplyer = width * 2; //setting the variable based on canvas width
+  swaggerMultiplyer = width * 0.001; //setting the variable based on canvas width
   
 }
 
@@ -38,6 +38,6 @@ circle(width/2,height/2,25); //circle in center of canvas done with expressions 
 
 circle(mouseX,mouseY,mouseX*swaggerMultiplyer); //circle that follows mouse (mouseX and mouseY are p5 variables that store mouse position)
 
-arc(width/2,height/2,150,150,radians(30),radians(330),PIE); //arc in center of canvas (x,y,width,height,start angle,end angle,mode)
+//arc(width/2,height/2,150,150,radians(30),radians(330),PIE); //arc in center of canvas (x,y,width,height,start angle,end angle,mode)
 
 }
