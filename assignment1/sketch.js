@@ -14,15 +14,17 @@ let mustard = '#FFDB58';
 //tried to add texture as an overlay image but will need more research since it didnt work
 
 function setup() {
-  createCanvas(500, 600);
+createCanvas(windowWidth, windowHeight);
+  //createCanvas(500, 600);
   background(220, 200, 200);
   overlayTexture = createGraphics(width, height)
-
-
 }
 
+
+
 function draw() {
-  
+  //translate(width/2, height/2); //tried to change origin point of rotation??
+
   fill(bergundy); // translucent
   noStroke();
   triangle(125, 450, 100, 100, 375, 300); //drew bergundy triangle
@@ -79,7 +81,7 @@ fill(violet);
 rect(300, 180, 37, 20); //violet attached to magenta line on left of canvas
 
 resetMatrix(); //found out about reset matrix to get original rotation
-applyGrain(); //tried learning to add grain texture but didnt work
+applyGrain(); //tried learning to add grain texture as a replacement for the scrunched paper texture but didnt work
   
 }
 
@@ -99,7 +101,10 @@ function applyGrain() {
     rect(x, y, 1, 1);
   } 
   //tried learning about i loops for the grain but didnt work
-  //nevermind it wored but it looks like shit
+  //nevermind it worked but it looks like shit
 
+  function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 
 }
