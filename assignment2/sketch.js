@@ -18,6 +18,8 @@ function draw() {
       rotate(rotation); //used frameCount to make it rotate continuously
       scale(mouseY/200); //scales the elipses with mouseY position
 
+      //read about cosine and sine here https://p5js.org/reference/p5/cos/
+
       strokeWeight(3);
       fill("#fdfdfd");
 
