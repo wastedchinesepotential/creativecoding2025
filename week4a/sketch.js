@@ -36,10 +36,10 @@ let randomYDisp;
 
 randomXDisp = random(-y*randomAmount, y*randomAmount);
 randomYDisp = random(-y*randomAmount, y*randomAmount);
-if mousePressed = true
+//if mousePressed = true
 
-strokeWeight(4);
-fill("rgba(255, 0, 0, 0.5)");
+//strokeWeight(4);
+//fill("rgba(255, 0, 0, 0.5)");
 
 circle(0, 0, 100);
 circle(-15, -10, 10);
