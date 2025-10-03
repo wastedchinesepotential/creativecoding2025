@@ -39,6 +39,10 @@ square(25, 490, 30); //bottom left black square
 //fill(color(15, 15, 100));
 fill(mustard);
 rotate(radians(40)) //tried to rotate the shapes instead of using polygon everytime
+//https://p5js.org/reference/p5/rotate/
+//learned i could rotate shapes because i did not want to have to plot exact points for polygons
+//unfortunately i did not understand how to change the point that it rotates on so it was a lot of guessing
+
 square(167, 60, 50); //top left yellow square
 
 rotate(radians(-40)) //rotated back to original position becasue hated radians
@@ -85,21 +89,21 @@ applyGrain(); //tried learning to add grain texture as a replacement for the scr
   
 }
 
-function applyGrain() {
-  let grainDensity = 200; //number of grain particles in canvas i think
+//function applyGrain() {
+//  let grainDensity = 200; //number of grain particles in canvas i think
   
-  noStroke();
+//  noStroke();
   
-  for (let i = 0; i < grainDensity; i++) { //randomly places grain particles i think
-    let x = random(width);
-    let y = random(height);
+//  for (let i = 0; i < grainDensity; i++) { //randomly places grain particles i think
+//    let x = random(width);
+//    let y = random(height);
     
-    let grainColor = color(0, 50); //grain is black and sorta translucent
-    fill(grainColor);
+//    let grainColor = color(0, 50); //grain is black and sorta translucent
+//    fill(grainColor);
     
     
-    rect(x, y, 1, 1);
-  } 
+//    rect(x, y, 1, 1);
+ // } 
   //tried learning about i loops for the grain but didnt work
   //nevermind it worked but it looks like shit
 
@@ -107,4 +111,4 @@ function applyGrain() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-}
+//}
