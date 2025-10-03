@@ -24,7 +24,7 @@ createCanvas(windowWidth, windowHeight);
 
 function draw() {
   //translate(width/2, height/2); //tried to change origin point of rotation??
-  scale(windowWidth/1000, windowHeight/1000); //scales everything based on window size, although i cant figure out how to make it center or keep the shapes in the same dimensions without warping
+  scale(windowWidth/1000); //scales everything below based on window width so it fits on screen although i cant center it
   fill(bergundy); // translucent
   noStroke();
   triangle(125, 450, 100, 100, 375, 300); //drew bergundy triangle
