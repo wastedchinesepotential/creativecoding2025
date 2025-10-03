@@ -24,7 +24,7 @@ createCanvas(windowWidth, windowHeight);
 
 function draw() {
   //translate(width/2, height/2); //tried to change origin point of rotation??
-
+  scale(windowWidth/1000, windowHeight/1000); //scales everything based on window size, although i cant figure out how to make it center or keep the shapes in the same dimensions without warping
   fill(bergundy); // translucent
   noStroke();
   triangle(125, 450, 100, 100, 375, 300); //drew bergundy triangle
@@ -84,10 +84,13 @@ rect(285, 200, 110, 10); //magenta line perpendicular to olive line drew before
 fill(violet); 
 rect(300, 180, 37, 20); //violet attached to magenta line on left of canvas
 
-resetMatrix(); //found out about reset matrix to get original rotation
-applyGrain(); //tried learning to add grain texture as a replacement for the scrunched paper texture but didnt work
-  
+//resetMatrix(); //found out about reset matrix to get original rotation will use in the future
+//https://p5js.org/reference/p5/resetMatrix/
 }
+
+ //scales the entire canvas down to 50%
+
+//tried learning about i loops for the grain but didnt work
 
 //function applyGrain() {
 //  let grainDensity = 200; //number of grain particles in canvas i think
@@ -104,8 +107,8 @@ applyGrain(); //tried learning to add grain texture as a replacement for the scr
     
 //    rect(x, y, 1, 1);
  // } 
-  //tried learning about i loops for the grain but didnt work
-  //nevermind it worked but it looks like shit
+
+
 
   function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
