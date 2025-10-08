@@ -44,7 +44,7 @@ thetaX++;;
   circle(circleD,circleX,circleY);
   circle(circleD,circleX,circleX);
  
-
+  //everything here is trying to get the circles to overlap at different times to create a more interesting patterns
   stroke("cyan");
   circleY = sin(radians(thetaY))*radiusY;
   //circle(0,circleY,circleD)
@@ -69,7 +69,14 @@ let y = sin(radians(theta))*radius;
   }
 
 //still in the experimental phase so kind of barebones and dont have clock elements yet
+//based on idea2 in my assignment3 readme, this might end up being 3 circles with smaller circles inside them (mainly for trail) effect
+//i will define the min and max diameter of the circles based on hour and minute circles for the pulasation
+//I will meet with you to get a more functional method to do this since this is bound to change as I play around
+//sorry.
 
+
+
+//ignore below it was me brainstorming and writing down ideas
 //plan?
 //have a line/tube that goes from 1-12 on both sides with little increments of 0.2 in between (12/60 is 0.2 cuz 60 seconds/min)
 //one circle is for the hour revolves around the number that is the hour and moves out every hour
