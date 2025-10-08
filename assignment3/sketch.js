@@ -32,14 +32,15 @@ thetaX++;;
   //text(hour(),0,30);
   noFill();
   stroke("pink")
-  circle(circleX,20,circleD); //dont quite understand why i had to put offset the Y by 20 to get it to center on the pink circles
+  circle(circleX,circleD,circleD); //dont quite understand why i had to put offset the Y by 20 to get it to center on the pink circles
+  //nvm I understand now, cirlceD = 25 so 20 had the illusion of being centered. I just needed to make the Y circleD as well
   //circle(circleY,circleX,circleD);
   circle(circleX,circleD,circleY); //flipped Y and D to let diameter be affected by circleY function
   circle(circleX,circleD,circleX);
   
 
   stroke("rgba(101, 233, 119, 1)");
-  circle(circleD,circleX,20);
+  circle(circleD,circleX,circleD);
   circle(circleD,circleX,circleY);
   circle(circleD,circleX,circleX);
  
