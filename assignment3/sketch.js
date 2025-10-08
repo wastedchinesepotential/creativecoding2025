@@ -9,6 +9,9 @@ let radiusY = 100;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  //colorMode(HSB); //changes to Hue Saturation Brightness for colors
+  //angleMode(DEGREES); //changes to degrees (0-360) instead of radians
+  //rectMode(CENTER); //changes rect mode to center instead of top left corner
   circleX = width/2;
   circleY = height/2;
 
@@ -27,9 +30,12 @@ circleX = cos(radians(thetaX))*radiusX;
 thetaX++;;
 
   translate(width/2,height/2);
-  //textSize(30)
+  textSize(30)
   //text(day(),0,0);
-  //text(hour(),0,30);
+  text(hour(),0,30);
+  text(minute(),0,60);
+  text(second(),0,90);
+
   noFill();
   stroke("pink")
   circle(circleX,circleD,circleD); //dont quite understand why i had to put offset the Y by 20 to get it to center on the pink circles
