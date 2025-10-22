@@ -60,16 +60,8 @@ thetaX++;;
   textSize(30)
   //text(day(),0,0);
   
-  //push pop so that i can translate the text without affecting the circles, wanted them in the middle and use fill colors to match the respective circle colors
-  push();
-  translate(-15,-50);
-  translate
-  text(hour(),0,30);
-  stroke("cyan");
-  text(minute(),0,60);
-  stroke("pink")
-  text(second(),0,90);
-  pop();
+  //push pop so that i can translate the text without affecting the circles, wanted them in the middle and use stroke colors to match the respective circle colors
+  
 
   noFill();
   stroke("pink")
@@ -98,8 +90,17 @@ thetaX++;;
   circle(circleX_h,circleY_h,circleY_h);
   thetaY++; 
 
+  push();
+  translate(-15,-50);
+  text(hour(),0,30);
+  stroke("cyan");
+  text(minute(),0,60);
+  stroke("pink")
+  text(second(),0,90);
+  pop();
+
   for(let i = 0; i<12;i++){
-let theta = i*(360/12);
+let theta = i*(360/12)*(second(),0,90);
 let radius = mouseX;
 let x = cos(radians(theta))*radius;
 let y = sin(radians(theta))*radius;
