@@ -126,8 +126,8 @@ class PokeBowl {
     
     if (this.ingredientKind === 'tobiko') { //draw based on which ingredient this bowl was selected from random earlier
       fill("rgba(223, 64, 154, 1)"); // pink tobiko
-      for (let i = 0; i < this.ingredientPositions.length; i++) {
-        circle(this.ingredientPositions[i].x, this.ingredientPositions[i].y, 5); 
+      for (let i = 0; i < this.ingredientPositions.length; i++) { //was wondering why it wasnt working for a second turn out had to use .length since multiple instances of positions in the array i think https://happycoding.io/tutorials/p5js/arrays
+        circle(this.ingredientPositions[i].x, this.ingredientPositions[i].y, 5); //basically an alternate version of how you did pepperoni in the pizza class video
       }
     }
 
