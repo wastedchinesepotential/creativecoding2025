@@ -23,7 +23,7 @@ function setup()
 function draw() {
   background(255, 10);
 
-  for(let i = 0; i < bryanPerlinNumber; i ++) {
+  for(let i = 0; i < bryanPerlinNumber2; i ++) {
     let bP2 = bryanPerlin2[i]; //grabs the number in the index, like the number in the array between 1-1000 (bryanPerlinNumber) in this case?
     point(bP2.x, bP2.y); //places on x and y position pulled from bryanPerlin array
     let bryanNoise2 = noise(bP2.x * bryanNoiseScale2, bP2.y * bryanNoiseScale2); //scales noise down
@@ -32,7 +32,7 @@ function draw() {
     bP2.y += sin(bryanA2);
     //right now particles leave screen
 
-    if(!bPonScreen(bP)) { //! means not, so if NOT on screen, new particle spawns and random width and height on screen
+    if(!bPonScreen(bP2)) { //! means not, so if NOT on screen, new particle spawns and random width and height on screen
       bP2.x = random(width);
       bP2.y = random(height);
     }
