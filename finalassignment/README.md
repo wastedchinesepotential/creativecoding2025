@@ -2,4 +2,4 @@
 
 ---
 
-This is the first step to learning how to make chladni patterns with a grid. This evolved into finalprojectfinal.
+This is the first step to learning how to make chladni patterns with a grid. This evolved into the "digitalchladni" folder.
