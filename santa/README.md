@@ -1,13 +1,6 @@
-# Week 8 Notes
+# Santa Hat Xmas Webcam for Navy Yard
 
 ---
-
-Fill array based off coordinates with createvector function
-
-leanr Floor function
-
-
-
 
 This is a README file that can be used to describe and document your assignment.
 

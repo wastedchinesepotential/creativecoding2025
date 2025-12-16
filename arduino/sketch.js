@@ -3,7 +3,9 @@
 
 let port; // object to hold serial port
 let c; // button
-let sensorValue = 0;
+//let sensorValue = 0;
+let potentiometer = 0;
+let photoCell = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -23,16 +25,31 @@ function draw() {
   background(220, 100, 50);
   // read serial bufffer
   let str = port.readUntil("\n");
-  // get rid of whitespace
-  str.trim();
+  /* // get rid of whitespace
+  str.trim(); */
+
+  let sensorValues = str.split(" "); //splits the values according to "space" character
+
   // if there's valid data
   if (str.length > 0) {
-    sensorValue = str;
+    potentiometer = sensorValues[0]; //first value from arduino
+    photoCell = sensorValues[1]; //second value from arduino
+    //sensorValue = str;
   }
-  let circleD = map(sensorValue,0,1023,0,width);
-  let hue = map(sensorValue,0,1023,0,360);
-  fill(hue,100,100);
+
+text("Potentiometer: " + potentiometer, 10, 50);
+text("photoCell: " + photoCell, 10, 70);
+
+  let circleD = map(potentiometer,0,1023,0,width);
+  let hue = map(potentiometer,0,1023,0,360);
+  let brightness = map(photoCell,0,1023,0,100);
+
+  fill(hue,0,brightness);
+
+
   circle(width/2,height/2,circleD);
+
+  
 
 
   // changes button label based on connection status

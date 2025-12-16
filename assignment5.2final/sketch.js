@@ -1,6 +1,6 @@
 let bryanPerlin2 = []; //array for particle count once again
-const bryanPerlinNumber2 = 5000;
-const bryanNoiseScale2 = 0.004 //needs to scale down for noise function
+const bryanPerlinNumber2 = 10000;
+const bryanNoiseScale2 = 0.005 //needs to scale down for noise function
 
 //https://www.youtube.com/watch?v=sZBfLgfsvSk
 
@@ -8,7 +8,7 @@ const bryanNoiseScale2 = 0.004 //needs to scale down for noise function
 
 function setup() 
 {
-  createCanvas(400, 400);
+  createCanvas(1000, 500);
   //background(0);
 
   //for loop that loops until i (number of loops reacher constant above)

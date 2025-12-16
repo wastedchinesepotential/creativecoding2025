@@ -1,5 +1,5 @@
 let bryanPerlin = []; //array for particle count once again
-const bryanPerlinNumber = 1000;
+const bryanPerlinNumber = 20000;
 const bryanNoiseScale = 0.01 //needs to scale down for noise function
 
 //https://www.youtube.com/watch?v=sZBfLgfsvSk
